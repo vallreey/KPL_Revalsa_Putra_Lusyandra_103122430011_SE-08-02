@@ -4,6 +4,8 @@ hasilnya sebelum diperbaiki adalah '0', karena ada '0' di bagian inputan dan di 
 
 <img src= "/02_Pemrograman_JavaScript/TP/Screenshot 2026-03-03 220643.png">
 
+<img src= "/02_Pemrograman_JavaScript/TP/Screenshot 2026-03-03 221814.png">
+
 yang berarti '0' tidak akan ikut dihitung karena lebih dari (>) bukan lebih dari sama dengan (>=)
 
 jadi intinya kalau sudah diganti jadi (>0) dan bukan (>=0) angka 0 di inputan tidak akan ikut dikalikan, dan hanya mengalikan angka yang lebih dari 0, mulai dari 1 dan seterusnya, dan negatif tidak termasuk, karena (negatif < 0)
