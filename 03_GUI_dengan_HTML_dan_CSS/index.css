@@ -1,0 +1,42 @@
+body {
+    font-family: 'Inconsolata', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #ffffff;
+}
+
+.container {
+    text-align: left;
+}
+
+.kotak-input {
+    display: block;
+    resize: none;
+    margin-top: 5px;
+    font-family: 'Inconsolata', monospace;
+}
+
+p > span {
+    color: coral;
+    font-weight: bold;
+}
+
+.button-group {
+    margin-top: 10px;
+}
+
+button {
+    font-family: 'Inconsolata', monospace;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
