@@ -2,7 +2,7 @@ Soal
 
 Buatlah tata letak laman yang kamu buat berada di tengah seperti di bawah ini, dan juga ubah font-nya dengan Inconsolata dari Google Fonts.
 
-![soal.png](/03_GUI_dengan_HTML_dan_CSS/559136401-7806afde-0808-4e5f-8d2b-ef4b63276a41.png)
+![soal.png](/03_GUI_dengan_HTML_dan_CSS/TP/559136401-7806afde-0808-4e5f-8d2b-ef4b63276a41.png)
 
 Jawab
 
@@ -17,7 +17,7 @@ hasil code css ada di :
 
 
 SS Output :
-![Jawaban.png](/03_GUI_dengan_HTML_dan_CSS/Screenshot%202026-03-10%20114304.png)
+![Jawaban.png](/03_GUI_dengan_HTML_dan_CSS/TP/Screenshot%202026-03-10%20114304.png)
 
 cc : Revalsa Putra Lusyandra
 
