@@ -9,8 +9,10 @@ Jawab
 Hasil preview html ada di :
 [index.html](index.html)
 
-hasil code js dan css ada di :
+hasil code js ada di :
 [index.js](index.js)
+
+hasil code css ada di :
 [index.css](index.css)
 
 
