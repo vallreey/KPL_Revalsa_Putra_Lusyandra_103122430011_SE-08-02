@@ -32,8 +32,10 @@ Hasil code ada di [tm.js](tm.js)
 ![Jawaban.png](/02_Pemrograman_JavaScript/TM/Screenshot%202026-03-08%20175235.png)
 
 ## Deskripsi
-Dokumen ini membuat fungsi `fizzBuzz` pada berkas `tm.js` yang menerima input berupa array. Fungsi ini akan mengecek setiap angka di dalam array lalu mengubahnya sesuai aturan tertentu.
+Dokumen ini membuat fungsi `fizzBuzz` di file `tm.js` yang menerima input berupa array. Di awal fungsi ada pengecekan menggunakan `Array.isArray(arr)` untuk memastikan bahwa input benar-benar array. Kalauu bukan array, fungsi langsung mengembalikan teks `"Input tidak valid"`.
 
-Kurang lebihnya, jika angka merupakan kelipatan 2 maka akan diubah menjadi `Fizz`, jika kelipatan 7 menjadi `Buzz`, dan jika kelipatan 14 menjadi `FizzBuzz`. Jika tidak memenuhi kondisi tersebut, maka angka akan tetap ditampilkan seperti semula.
+Di dalam fungsi juga digunakan variabel seperti `let hasil = []` untuk menyimpan hasil akhir dalam bentuk array baru, dan `let i = 0` sebagai nilai untuk perulangan. Perulangan yang dipakai adalah `while`, yang berjalan selama `i < arr.length`, Jadi nantinya program akan memproses setiap elemen di dalam array satu per satu.
 
-Di Program juga mengecek apakah input yang diberikan benar-benar array. Jika bukan array, maka fungsi akan mengembalikan pesan `"Input tidak valid"`. lalu nanti akan dijalankan menggunakan `node test.js`. Jika fungsi berjalan dengan benar, maka saat menjalankan node `test.js` akan muncul pesan bahwa setiap tes berhasil `Tes (ke-) berhasil`.
+Setiap elemen array diambil dengan `let angka = arr[i]`, lalu dicek menggunakan percabangan `if...else`. Kalau angkanya kelipatan 14 maka dimasukkan `"FizzBuzz"` ke dalam array hasil menggunakan `push()`. Jika kelipatan 2 maka dimasukkan `"Fizz"`, dan jika kelipatan 7 maka dimasukkan `"Buzz"`. Jika tidak memenuhi kondisi tersebut, maka angka aslinya dimasukkan ke dalam array hasil.
+
+Nah setelah satu elemen selesai diproses, nilai `i` ditambah dengan `i++` agar perulangan berpindah ke elemen berikutnya. Di bagian akhir, program mengecek apakah di dalam array ada angka 1 menggunakan `arr.includes(1)`. Jika ada, maka hasil digabung menggunakan `join(", ")`, jika tidak maka digabung dengan `join(" ")`. Terakhir, fungsi diekspor menggunakan `module.exports` agar bisa dipanggil dari file lain seperti `test.js`.
