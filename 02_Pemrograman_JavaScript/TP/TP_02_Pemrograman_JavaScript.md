@@ -1,4 +1,4 @@
-# 02_Pemrograman_JavaScript
+# TUGAS PENDAHULUAN 02_Pemrograman_JavaScript
 
 `Revalsa Putra Lusyandra`
 
