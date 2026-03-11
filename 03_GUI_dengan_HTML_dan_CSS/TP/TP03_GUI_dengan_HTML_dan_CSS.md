@@ -31,6 +31,6 @@ hasil code css ada di :
 
 ## Deskripsi :
 
-Dokumen ini membuat laman pengkonversi gaya teks dengan tata letak berada di tengah halaman serta menggunakan font Inconsolata dari Google Fonts.
+Dokumen ini membuat page pengkonversi gaya teks dengan tata letak berada di tengah halaman serta menggunakan font Inconsolata dari Google Fonts.
 
-Posisi laman di tengah dicapai dengan menggunakan Flexbox pada elemen `body` di properti `display: flex`, `justify-content: center`, dan `align-items: center`, jadi dengan ini akan membuat seluruh konten dalam `div.container` berada tepat di tengah layar.
+Lalu membuat posisi page di tengah dengan menggunakan Flexbox pada elemen `body` di properti `display: flex`, `justify-content: center`, dan `align-items: center`, jadi dengan ini akan membuat seluruh konten dalam `div.container` berada tepat di tengah layar.
