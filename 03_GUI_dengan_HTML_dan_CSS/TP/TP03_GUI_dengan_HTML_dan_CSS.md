@@ -34,3 +34,19 @@ hasil code css ada di :
 Dokumen ini membuat page pengkonversi gaya teks dengan tata letak berada di tengah halaman serta menggunakan font Inconsolata dari Google Fonts.
 
 Lalu membuat posisi page di tengah dengan menggunakan Flexbox pada elemen `body` di properti `display: flex`, `justify-content: center`, dan `align-items: center`, jadi dengan ini akan membuat seluruh konten dalam `div.container` berada tepat di tengah layar.
+
+lebih lengkapnya untuk ubah font menajdi inconsolata dan tata letak di tengah di [index.css](index.css) :
+```
+body {
+    /* agar font jadi Inconsolata */
+    font-family: 'Inconsolata', monospace;
+    
+    /* agar page ada di center */
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #ffffff;
+}
+```
