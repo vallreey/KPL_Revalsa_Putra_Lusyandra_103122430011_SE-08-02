@@ -12,7 +12,8 @@
 
 ## Soal
 
-![soal.png](/03_GUI_dengan_HTML_dan_CSS/TP/559136401-7806afde-0808-4e5f-8d2b-ef4b63276a41.png)Buatlah tata letak laman yang kamu buat berada di tengah seperti di bawah ini, dan juga ubah font-nya dengan Inconsolata dari Google Fonts.
+Buatlah tata letak laman yang kamu buat berada di tengah seperti di bawah ini, dan juga ubah font-nya dengan Inconsolata dari Google Fonts.
+![soal.png](/03_GUI_dengan_HTML_dan_CSS/TP/559136401-7806afde-0808-4e5f-8d2b-ef4b63276a41.png)
 
 ## Kode Sumber
 Hasil preview html ada di :
