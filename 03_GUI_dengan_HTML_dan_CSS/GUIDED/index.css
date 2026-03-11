@@ -1,0 +1,18 @@
+.kotak-input {
+    display: block;
+    resize: none;
+}
+
+p > span {
+    color: coral;
+    font-weight: bold;
+}
+
+button {
+    display: inline;
+}
+
+p > span {
+    color: #d128d1;
+    font-weight: bold;
+}

@@ -1,11 +1,20 @@
-Soal
+# TP 03_GUI_dengan_HTML_dan_CSS
 
-Buatlah tata letak laman yang kamu buat berada di tengah seperti di bawah ini, dan juga ubah font-nya dengan Inconsolata dari Google Fonts.
+Revalsa Putra Lusyandra
 
-![soal.png](/03_GUI_dengan_HTML_dan_CSS/TP/559136401-7806afde-0808-4e5f-8d2b-ef4b63276a41.png)
+103122430011
 
-Jawab
+S1SE-08-02
 
+Dosen pengampu: Yudha Islami Sulistiya
+
+Asisten Praktikum: Adhiansyah Ancha & Hamid Khaeruman
+
+## Soal
+
+![soal.png](/03_GUI_dengan_HTML_dan_CSS/TP/559136401-7806afde-0808-4e5f-8d2b-ef4b63276a41.png)Buatlah tata letak laman yang kamu buat berada di tengah seperti di bawah ini, dan juga ubah font-nya dengan Inconsolata dari Google Fonts.
+
+## Kode Sumber
 Hasil preview html ada di :
 [index.html](index.html)
 
@@ -16,10 +25,11 @@ hasil code css ada di :
 [index.css](index.css)
 
 
-SS Output :
+## Output :
 ![Jawaban.png](/03_GUI_dengan_HTML_dan_CSS/TP/Screenshot%202026-03-10%20114304.png)
 
-cc : Revalsa Putra Lusyandra
+## Deskripsi :
 
+Dokumen ini membuat laman pengkonversi gaya teks dengan tata letak berada di tengah halaman serta menggunakan font Inconsolata dari Google Fonts.
 
-<img src="https://tenor.com/view/low-cortisol-low-cortisol-seiun-sky-uma-musume-gif-10541092392106719335.gif">
+Posisi laman di tengah dicapai dengan menggunakan Flexbox pada elemen `body` di properti `display: flex`, `justify-content: center`, dan `align-items: center`, jadi dengan ini akan membuat seluruh konten dalam `div.container` berada tepat di tengah layar.
