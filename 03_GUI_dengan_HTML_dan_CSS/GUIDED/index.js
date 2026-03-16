@@ -1,35 +1,59 @@
-const editorElement = document.getElementById("editor-kecil");
-const charCountElement = document.getElementById("hf");
-const capsCountElement = document.getElementById("hb");
-const lowerCountElement = document.getElementById("hk");
+const elemenEditor = document.getElementById("editor-kecil"); 
+// mengambil elemen textarea dari HTML pakai id "editor-kecil" agar bisa dipakai di JavaScript
 
-editorElement.addEventListener("input", (event) => {
-    const text = event.target.value;
-    
-    charCountElement.textContent = text.length;
-    
-    const capsMatch = text.match(/[A-Z]/g);
-    capsCountElement.textContent = capsMatch ? capsMatch.length : 0;
-    
-    const lowerMatch = text.match(/[a-z]/g);
-    lowerCountElement.textContent = lowerMatch ? lowerMatch.length : 0;
-});
+const elemenHf = document.getElementById("hf");
+// ini untuk menampilkan jumlah seluruh huruf
 
-document.getElementById("huruf-besar").onclick = () => {
-    editorElement.value = editorElement.value.toUpperCase();
-};
+const elemenHb = document.getElementById("hb");
+// ini untuk menampilkan jumlah huruf besar
 
-document.getElementById("huruf-kecil").onclick = () => {
-    editorElement.value = editorElement.value.toLowerCase();
-};
+const elemenHk = document.getElementById("hk");
+// ini untuk menampilkan jumlah huruf kecil
 
-document.getElementById("huruf-paragraf").onclick = () => {
-    let text = editorElement.value.toLowerCase();
-    
-    let capitalizedText = text.replace(/(^\s*\w|[\.\!\?]\s*\w)/g, (match) => {
-        return match.toUpperCase();
-    });
+function HitungHuruf(event) {
+   // const textlength = event.target.value.length;
 
-    editorElement.value = capitalizedText;
-    editorElement.dispatchEvent(new Event('input'));
-};
+    const teks = event.target.value;
+    // untuk text yang diinput di textarea
+
+    const teksBaru = teks.split(" ");
+    // memecah teks menjadi beberapa bagian (array) berdasarkan spasi
+
+    let jumlahHuruf = 0; 
+    // variabel untuk menyimpan total huruf
+
+    let jumlahHurufBesar = 0;
+    // variabel untuk menghitung huruf kapital
+
+    let jumlahHurufKecil = 0;
+    // variabel untuk menghitung huruf kecil
+
+    for (let i = 0; i < teksBaru.length; i++) {
+        const kata = teksBaru[i];
+        jumlahHuruf += kata.length; 
+        // menambahkan panjang setiap kata ke total huruf
+
+        for (let j = 0; j < kata.length; j++) {
+            const huruf = kata[j]; 
+            // mengambil huruf satu per satu dari kata
+
+            if (huruf >= "A" && huruf <= "Z") { 
+                // mengecek apakah huruf termasuk huruf kapital
+                jumlahHurufBesar++;
+
+            } else if (huruf >= "a" && huruf <= "z") {
+                // mengecek apakah huruf termasuk huruf kecil
+                jumlahHurufKecil++;
+            }
+        }
+    }
+
+    elemenHf.textContent = jumlahHuruf;
+    elemenHb.textContent = jumlahHurufBesar;
+    elemenHk.textContent = jumlahHurufKecil;
+    // menampilkan hasil perhitungan huruf ke elemen span di HTML
+} 
+
+elemenEditor.addEventListener("input", HitungHuruf);
+// event listener ini untuk running fungsi HitungHuruf setiap kali ada perubahan input di textarea, 
+// jadi jumlah huruf akan langsung diperbarui saat pengguna mengetik

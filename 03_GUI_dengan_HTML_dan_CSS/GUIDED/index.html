@@ -1,37 +1,34 @@
-//tambahin fungsi html lain dan penjelasannya
-
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" 
-        content="width=device-width, initial-scale=1.0">
-        
-        <title>KPL</title>
-        <link rel="stylesheet" href="./index.css">
-    </head>
-    <body>
-        <div class="container">
-            <h1>Pengkonversi Gaya Teks</h1>
-            <p>Alat ini bisa mengubah teks menjadi huruf besar, huruf kecil, dan paragraf.</p>
-            
-            <div class="input-group">
-                <label for="editor-kecil">Masukkan teks:</label>
-                <textarea class="kotak-input" id="editor-kecil" rows="10" cols="60" placeholder="Kata-kata..."></textarea>
-            </div>
+    // ini struktur HTML dasar untuk membuat halaman web, dan bahasa yang dipakai diset ke English (en)
 
-            <p>
-                Huruf: <span id="hf">0</span>, 
-                huruf besar: <span id="hb">0</span>, 
-                huruf kecil: <span id="hk">0</span>
-            </p>
+<head>
+    <meta charset="UTF-8"> // supaya berbagai karakter bisa terbaca dengan benar oleh browser
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> // supaya tampilan halaman bisa menyesuaikan ukuran layar device masing masing, terutama HP (responsive)
+    <title>Document</title> // judul halaman yang nanti muncul di tab browser
+    <link rel="stylesheet" href="index.css"> // menghubungkan file HTML ini dengan file CSS untuk mengatur tampilan
+</head>
 
-            <div class="button-group">
-                <button id="huruf-besar">Besarkan</button>
-                <button id="huruf-kecil">Kecilkan</button>
-                <button id="huruf-paragraf">Paragrafkan</button>
-            </div>
+<body> // bagian body ini berisi semua konten yang ditampilkan di halaman
+    <div class="container"> // div container ini dipakai untuk group/membungkus isi agar styling di CSS nanti lebih mudah diatur
+        <h1>Pengkonversi Gaya Teks</h1>
+        <p>Alat ini bisa mengubah teks menjadi huruf besar, huruf kecil, atau format paragraf.</p>
+        <label for="editor-kecil">Masukkan teks:</label>
+        <textarea class="kotak-input" id="editor-kecil" rows="10" cols="60" placeholder="Kata-kata..."></textarea>
+        // ini untuk keterangan untuk input teks, sedangkan textarea adalah tempat untuk mengetik teks yang lebih panjang, id dipakai supaya bisa diakses lewat JavaScript
+        <p>
+            Huruf: <span id="hf">0</span>,
+            huruf besar: <span id="hb">0</span>,
+            huruf kecil: <span id="hk">0</span>
+            // bagian ini menampilkan jumlah huruf total, huruf besar, dan huruf kecil yang nanti dihitung lewat JavaScript menggunakan id masing-masing
+        </p>
+        <div>
+            <button id="huruf-besar">Besarkan</button>
+            <button id="huruf-kecil">Kecilkan</button>
+            <button id="huruf-paragraf">Paragrafkan</button>
+            // button ini untuk mengubah teks jadi huruf besar, huruf kecil, atau format paragraf lewat JavaScript
         </div>
-        <script src="./index.js"></script>
-    </body>
+    </div>
+    <script src="./index.js"></script> // menghubungkan file JavaScript yang berisi fungsi
+</body>
 </html>
