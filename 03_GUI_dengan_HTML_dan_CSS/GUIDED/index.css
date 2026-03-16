@@ -1,59 +1,53 @@
-/*{
-    border: 1px solid black;
-    padding: 10px;
-}code ini biasanya dipakai untuk proses desain supaya semua elemen terlihat batasnya.
-Setiap elemen akan diberi garis border hitam dan jarak dalam (padding) 10px,
-jadi lebih mudah melihat posisi dan ukuran elemen di halaman.*/
-
-body { 
-    /* mengatur jenis font yang dipakai di seluruh halaman.
-    kalau font pertama tidak ada di device, browser akan mencoba font berikutnya. */
-    font-family: 'sagoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, monospace;
+body{
+    /* mengatur font utama untuk seluruh halaman */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.kotak-input {
-    /* mengatur textarea agar tampil sebagai blok penuh,
-    serta mematikan fitur resize agar ukuran textarea tidak bisa diubah oleh pengguna */
-    display: block;
-    resize: none;
+.kotak-input{
+    /* membuat textarea tampil sebagai block dan tidak bisa di resize */
+    display:block;
+    resize:none;
 }
 
-/*p > span {
-    color: #6500fd;  warna teks bisa juga ditulis dengan kode hex seperti ini
-    font-weight: bold;
-}*/
-
-p > span {
-    /* mengubah warna teks pada span di dalam paragraf
-    dan membuat teksnya menjadi tebal */
-    color: #7a106d; 
-    font-weight: bold;
+button{
+    /* membuat tombol tampil di baris baru */
+    display:block;
+    margin-top:10px;
 }
 
-/*#hf {
-    color: #c15d83;  contoh penggunaan id selector untuk memberi warna tertentu
-    font-weight: bold;
-}*/
-
-button {
-    /* membuat tombol menjadi elemen block
-    jadi setiap tombol akan tampil di baris baru */
-    display: block;
+.container{
+    /* mengatur lebar maksimum container supaya tampilan tetap rapi */
+    max-width:700px;
 }
 
-.container {
-    /* mengatur lebar maksimal container agar tampilan konten tetap rapi dan tidak terlalu melebar */
-    max-width: 700px;
+/* style popup */
 
-    /* contoh pengaturan lebar minimal container (opsional) */
-    /* min-width: 700px; */
-    /* min-width: 50%; */
+.popup{
+    /* popup disembunyikan dulu */
+    display:none;
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.5);
+
+    /* supaya isi popup berada di tengah layar */
+    justify-content:center;
+    align-items:center;
 }
 
-@media screen and (max-width: 500px) {
-    /* bagian ini dipakai untuk responsive design. kalau ukuran layar 500px atau lebih kecil, warna teks span akan berubah */
-    p > span {
-        color: #e2a8e9; /* contoh warna lain menggunakan kode hex */
-        font-weight: bold;
-    }
+.popup-content{
+    /* kotak isi popup */
+    background:white;
+    padding:20px;
+    text-align:center;
+}
+
+.popup img{
+    /* ukuran gif */
+    width:120px;
 }

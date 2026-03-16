@@ -1,34 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-    // ini struktur HTML dasar untuk membuat halaman web, dan bahasa yang dipakai diset ke English (en)
-
 <head>
-    <meta charset="UTF-8"> // supaya berbagai karakter bisa terbaca dengan benar oleh browser
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> // supaya tampilan halaman bisa menyesuaikan ukuran layar device masing masing, terutama HP (responsive)
-    <title>Document</title> // judul halaman yang nanti muncul di tab browser
-    <link rel="stylesheet" href="index.css"> // menghubungkan file HTML ini dengan file CSS untuk mengatur tampilan
+    <meta charset="UTF-8"> <!-- supaya semua karakter bisa terbaca dengan benar -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- supaya tampilan menyesuaikan layar device -->
+    
+    <title>KPL</title> <!-- judul halaman yang muncul di tab browser -->
+    <link rel="stylesheet" href="./index.css"> <!-- menghubungkan file CSS -->
 </head>
 
-<body> // bagian body ini berisi semua konten yang ditampilkan di halaman
-    <div class="container"> // div container ini dipakai untuk group/membungkus isi agar styling di CSS nanti lebih mudah diatur
-        <h1>Pengkonversi Gaya Teks</h1>
-        <p>Alat ini bisa mengubah teks menjadi huruf besar, huruf kecil, atau format paragraf.</p>
-        <label for="editor-kecil">Masukkan teks:</label>
-        <textarea class="kotak-input" id="editor-kecil" rows="10" cols="60" placeholder="Kata-kata..."></textarea>
-        // ini untuk keterangan untuk input teks, sedangkan textarea adalah tempat untuk mengetik teks yang lebih panjang, id dipakai supaya bisa diakses lewat JavaScript
+<body>
+
+    <div class="container"> <!-- container untuk membungkus semua konten -->
+        <h1>Pemeriksa Teks</h1>
+        <p>Masukkan teks lalu klik tombol cek untuk melihat hasilnya.</p>
+
+        <div class="input-group">
+            <label for="editor-kecil">Masukkan teks:</label> <!-- label untuk textarea -->
+            <textarea class="kotak-input" id="editor-kecil" rows="10" cols="60" placeholder="Kata-kata..."></textarea>
+            <!-- textarea sebagai tempat user mengetik teks -->
+        </div>
+
         <p>
-            Huruf: <span id="hf">0</span>,
-            huruf besar: <span id="hb">0</span>,
+            Huruf: <span id="hf">0</span>, 
+            huruf besar: <span id="hb">0</span>, 
             huruf kecil: <span id="hk">0</span>
-            // bagian ini menampilkan jumlah huruf total, huruf besar, dan huruf kecil yang nanti dihitung lewat JavaScript menggunakan id masing-masing
+            <!-- span ini akan diisi hasil perhitungan dari JavaScript -->
         </p>
-        <div>
-            <button id="huruf-besar">Besarkan</button>
-            <button id="huruf-kecil">Kecilkan</button>
-            <button id="huruf-paragraf">Paragrafkan</button>
-            // button ini untuk mengubah teks jadi huruf besar, huruf kecil, atau format paragraf lewat JavaScript
+
+        <div class="button-group">
+            <button id="cek-teks">Cek Teks</button>
+            <!-- tombol untuk mengecek teks dan menampilkan popup -->
         </div>
     </div>
-    <script src="./index.js"></script> // menghubungkan file JavaScript yang berisi fungsi
+
+    <!-- popup yang akan muncul ketika menekan tombol cek teks -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <img src="https://tenor.com/view/umamusume-haru-urara-umazing-anime-gif-1193222197980579467.gif" alt="success">
+            <!-- gif yang muncul ketika teks berhasil dicek -->
+            <p>Teks berhasil dicek, bisa tutup dan lihat hasilnya</p>
+            <button id="tutup">Tutup</button>
+        </div>
+    </div>
+
+<script src="./index.js"></script> <!-- menghubungkan file JavaScript -->
 </body>
 </html>
