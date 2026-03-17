@@ -2,22 +2,22 @@ const elemenEditor = document.getElementById("editor-kecil");
 // mengambil textarea dari HTML supaya bisa digunakan di JavaScript
 
 const elemenHf = document.getElementById("hf"); 
-// span untuk menampilkan jumlah huruf total
+// untuk menampilkan jumlah huruf total
 
 const elemenHb = document.getElementById("hb"); 
-// span untuk menampilkan jumlah huruf besar
+// untuk menampilkan jumlah huruf besar
 
 const elemenHk = document.getElementById("hk"); 
-// span untuk menampilkan jumlah huruf kecil
+// untuk menampilkan jumlah huruf kecil
 
 const tombolCek = document.getElementById("cek-teks"); 
-// tombol untuk menjalankan pengecekan teks
+// button untuk menjalankan pengecekan teks
 
 const popup = document.getElementById("popup"); 
 // elemen popup
 
 const tombolTutup = document.getElementById("tutup"); 
-// tombol untuk menutup popup
+// button untuk menutup popup
 
 
 function HitungHuruf(){

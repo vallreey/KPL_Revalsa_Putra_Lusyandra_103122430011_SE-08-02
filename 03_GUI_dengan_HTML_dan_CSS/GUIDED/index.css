@@ -41,13 +41,13 @@ button{
 }
 
 .popup-content{
-    /* kotak isi popup */
+    /* background popup */
     background:white;
     padding:20px;
     text-align:center;
 }
 
 .popup img{
-    /* ukuran gif */
+    /* size gif */
     width:120px;
 }
