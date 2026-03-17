@@ -1,0 +1,63 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Inconsolata', monospace;
+    transition: all 0.3s ease;
+    margin: 0;
+}
+
+#container {
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.kotak-input {
+    width: 100%;
+    display: block;
+    resize: none;
+    margin: 10px 0;
+    box-shadow: grey 0px 1px 2px;
+}
+
+p > span {
+    color: coral;
+    font-weight: bold;
+}
+
+.tombol,
+.grup-tg {
+    margin-top: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    margin: 0 2px;
+    cursor: pointer;
+    font-family: "Inconsolata", monospace;
+    border: none;
+}
+
+.mode-gelap {
+    background-color: #171b25;
+    color: #ebecf7;
+}
+
+.mode-gelap .kotak-input {
+    background-color: #2e3443;
+    color: #ebecf7;
+    border: 1px solid #ebecf7;
+}
+
+.mode-gelap button {
+    background-color: #29ddcc;
+    font-weight: bold;
+    border: none;
+}
+
+.mode-gelap .container {
+    background-color: #171b25;
+}
