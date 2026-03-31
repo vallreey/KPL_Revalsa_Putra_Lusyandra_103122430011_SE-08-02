@@ -59,4 +59,6 @@ Untuk tipe diisi `"semua"`, jadi semua karakter termasuk spasi ikut dihitung. Se
 
 Setelah itu saya menambahkan `module.exports` supaya function ini bisa dipakai di file lain/ di `test.js`. Lalu di `test.js` function tersebut saya impor menggunakan `require`.
 
+Lalu agar hasilnya 11 dan 9, untuk `const str = "Bar bar";` ditambah 1 huruf `"bar"` lagi, menjadi `const str = "Bar bar bar";`. jadi output akan 11 dan 9 sesuai dengan screenshot output saya dan ketentuan soal.
+
 Kurang lebihnya seperti itu...
