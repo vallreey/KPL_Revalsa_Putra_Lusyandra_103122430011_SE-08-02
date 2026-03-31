@@ -83,7 +83,7 @@ Di sini saya menambahkan beberapa code, dan untuk penjelasannya:
 }
 ```
 
-- Di index.js, saya menambah code agar bisa ganti ke mode sepia dan mode lainnya.
+- Di index.js, saya menambah code agar bisa ganti ke mode sepia dan mode lainnya :
 ```
 buttonLightElement.addEventListener("click", () => {
     document.documentElement.classList.remove("mode-gelap");
