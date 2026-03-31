@@ -1,4 +1,4 @@
-# TM 05_Generics
+# TP 05_Generics
 
 `Revalsa Putra Lusyandra`
 
