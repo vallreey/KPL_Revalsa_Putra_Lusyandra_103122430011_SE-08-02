@@ -1,4 +1,4 @@
-# TM 06_Design_by_Contract_dan_Defensive_Programming
+# TP 06_Design_by_Contract_dan_Defensive_Programming
 
 `Revalsa Putra Lusyandra`
 
