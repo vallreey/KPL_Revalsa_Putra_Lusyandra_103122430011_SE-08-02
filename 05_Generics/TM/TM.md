@@ -1,4 +1,4 @@
-# TM 04_Automata_dan_Table-driven_Construction
+# TM 05_Generics
 
 `Revalsa Putra Lusyandra`
 
