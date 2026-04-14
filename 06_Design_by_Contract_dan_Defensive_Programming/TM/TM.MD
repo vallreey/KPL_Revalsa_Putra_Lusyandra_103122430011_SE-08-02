@@ -52,7 +52,7 @@ function is_not_fizzbuzz(number) {
   return true;
 }
 ```
-function ini, saya menerapkan input validation untuk memastikan bahwa argumen yang masuk benar-benar bertipe data number. di sini saya menggunakan `Number.isFinite` untuk memvalidasi argumen agar tetap berada dalam tipe data numerik namun mengecualikan nilai-nilai yang infinity atau tidak terdefinisi yang tidak bisa diproses, seperti `NaN` atau `Infinity`, kalau ada `NaN` Atau `Infinity` maka program akan dihentikan dan melempar TypeError.
+di function atas, saya menerapkan input validation untuk memastikan bahwa argumen yang masuk benar-benar bertipe data number. di sini saya menggunakan `Number.isFinite` untuk memvalidasi argumen agar tetap berada dalam tipe data numerik namun mengecualikan nilai-nilai yang infinity atau tidak terdefinisi yang tidak bisa diproses, seperti `NaN` atau `Infinity`, kalau ada `NaN` Atau `Infinity` maka program akan dihentikan dan melempar TypeError.
 
 Setelah memastikan input tersebut aman, lanjut ke tahap evaluasi logika menggunakan operator modulo. Di sini saya membuat function untuk mengetahui apakah angka tersebut ada sisa bagi nol saat bertemu dengan angka 3 atau 5. Jika iya, maka kondisinya terpenuhi dan akan return nilai false.
 
