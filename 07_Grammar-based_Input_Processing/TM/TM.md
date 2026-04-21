@@ -35,7 +35,7 @@ Selanjutnya saya memisahkan bagian key dan value dengan `split(':')`, karena for
 
 Ketika menemukan `User-agent`, akan menyimpan nilainya ke dalam `currentAgents`. Jika agent tersebut belum ada di object hasil, maka saya inisialisasi dengan struktur `Allow` dan `Disallow` berupa array kosong. Jadi setiap agent punya tempat sendiri untuk menyimpan aturan.
 
-Untuk bagian `Allow` dan `Disallow`, lalu saya menambahkan path ke semua agent yang sedang aktif di `currentAgents`. Saya juga memastikan value tidak kosong supaya tidak ada data yang tidak valid masuk ke dalam array.
+Untuk bagian `Allow` dan `Disallow`, lalu saya menambahkan path ke semua agent yang sedang aktif di `currentAgents`. lalu di situ memastikan value tidak kosong supaya tidak ada data yang tidak valid masuk ke dalam array.
 
 Sedangkan untuk `Sitemap`, karena sifatnya global (tidak tergantung user-agent), jadi langsung masukkan ke dalam array Sitemap di object hasil. Hal yang sama juga saya lakukan untuk Host, tapi disimpan sebagai properti tunggal karena biasanya hanya satu nilai.
 
