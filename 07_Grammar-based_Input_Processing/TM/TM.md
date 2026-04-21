@@ -33,10 +33,10 @@ Setelah itu dilakukan perulangan untuk membaca setiap baris. Di sini saya gunaka
 
 Selanjutnya saya memisahkan bagian key dan value dengan `split(':')`, karena format `robots.txt` memang seperti `User-agent: *`. Key saya ubah ke lowercase.
 
-Ketika menemukan `User-agent`, saya simpan nilainya ke dalam `currentAgents`. Jika agent tersebut belum ada di object hasil, maka saya inisialisasi dengan struktur `Allow` dan `Disallow` berupa array kosong. Jadi setiap agent punya tempat sendiri untuk menyimpan aturan.
+Ketika menemukan `User-agent`, akan menyimpan nilainya ke dalam `currentAgents`. Jika agent tersebut belum ada di object hasil, maka saya inisialisasi dengan struktur `Allow` dan `Disallow` berupa array kosong. Jadi setiap agent punya tempat sendiri untuk menyimpan aturan.
 
-Untuk bagian `Allow` dan `Disallow`, saya menambahkan path ke semua agent yang sedang aktif di `currentAgents`. Saya juga memastikan value tidak kosong supaya tidak ada data yang tidak valid masuk ke dalam array.
+Untuk bagian `Allow` dan `Disallow`, lalu saya menambahkan path ke semua agent yang sedang aktif di `currentAgents`. Saya juga memastikan value tidak kosong supaya tidak ada data yang tidak valid masuk ke dalam array.
 
-Sedangkan untuk `Sitemap`, karena sifatnya global (tidak tergantung user-agent), saya langsung masukkan ke dalam array Sitemap di object hasil. Hal yang sama juga saya lakukan untuk Host, tapi disimpan sebagai properti tunggal karena biasanya hanya satu nilai.
+Sedangkan untuk `Sitemap`, karena sifatnya global (tidak tergantung user-agent), jadi langsung masukkan ke dalam array Sitemap di object hasil. Hal yang sama juga saya lakukan untuk Host, tapi disimpan sebagai properti tunggal karena biasanya hanya satu nilai.
 
 Jadi secara keseluruhan, function ini bekerja mirip konsep sederhana state machine, di mana `currentAgents` menjadi state yang aktif. Setiap kali ada `User-agent`, state berubah, dan aturan seperti `Allow` atau `Disallow` akan mengikuti state tersebut sampai ada perubahan atau reset.
