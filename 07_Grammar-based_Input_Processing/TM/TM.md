@@ -31,7 +31,7 @@ Function yang saya buat di [index.js](./index.js) ini bertujuan untuk membaca is
 
 Setelah itu dilakukan perulangan untuk membaca setiap baris. Di sini saya gunakan trim() supaya spasi tidak mengganggu proses parsing. Jika baris kosong atau berupa komentar `(diawali #)`, jadi dianggap blok sebelumnya sudah selesai, sehingga `currentAgents` di-reset agar tidak terbawa ke aturan berikutnya.
 
-Selanjutnya saya memisahkan bagian key dan value dengan `split(':')`, karena format `robots.txt` memang seperti `User-agent: *`. Key saya ubah ke lowercase.
+Selanjutnya saya memisahkan bagian key dan value dengan `split(':')`, karena format `robots.txt` memang seperti `User-agent: *`. untuk Key saya ubah ke lowercase.
 
 Ketika menemukan `User-agent`, akan menyimpan nilainya ke dalam `currentAgents`. Jika agent tersebut belum ada di object hasil, maka saya inisialisasi dengan struktur `Allow` dan `Disallow` berupa array kosong. Jadi setiap agent punya tempat sendiri untuk menyimpan aturan.
 
