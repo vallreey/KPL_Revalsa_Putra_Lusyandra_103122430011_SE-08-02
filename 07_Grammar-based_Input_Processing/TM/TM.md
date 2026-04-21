@@ -29,7 +29,7 @@ Ada di [index.js](./index.js)
 ## Deskripsi
 Function yang saya buat di [index.js](./index.js) ini bertujuan untuk membaca isi `robots.txt` per baris, lalu mengubahnya menjadi object yang lebih terstruktur dan mudah digunakan. Di awal, saya pecah teks menjadi array baris menggunakan `split('\n')`, lalu menyiapkan object hasil dengan properti `agents` dan `Sitemap`, serta membuat variabel `currentAgents` untuk menyimpan `user-agent` yang sedang aktif saat parsing berlangsung.
 
-Setelah itu dilakukan perulangan untuk membaca setiap baris. Di sini saya gunakan trim() supaya spasi tidak mengganggu proses parsing. Jika baris kosong atau berupa komentar `(diawali #)`, maka saya anggap blok sebelumnya sudah selesai, sehingga currentAgents di-reset agar tidak terbawa ke aturan berikutnya.
+Setelah itu dilakukan perulangan untuk membaca setiap baris. Di sini saya gunakan trim() supaya spasi tidak mengganggu proses parsing. Jika baris kosong atau berupa komentar `(diawali #)`, maka saya anggap blok sebelumnya sudah selesai, sehingga `currentAgents` di-reset agar tidak terbawa ke aturan berikutnya.
 
 Selanjutnya saya memisahkan bagian key dan value dengan `split(':')`, karena format `robots.txt` memang seperti `User-agent: *`. Key saya ubah ke lowercase supaya lebih konsisten dan tidak sensitif terhadap perbedaan huruf besar/kecil.
 
