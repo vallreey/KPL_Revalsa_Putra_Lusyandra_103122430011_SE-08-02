@@ -27,95 +27,16 @@ Ada di [index.js](./index.js)
 ![2.](img2.png)
 
 ## Deskripsi
-Function yang saya buat di [index.js](./index.js) bertujuan untuk read isi robots.txt per baris, lalu mengubahnya menjadi object yang terstruktur. Di awal function dilakukan pemecahan teks menjadi array baris menggunakan `split('\n')` lalu menyiapkan object hasil dengan properti agents dan Sitemap. lalu saya membuat variabel currentAgents untuk menyimpan user-agent yang sedang aktif. codenya:
-```
-function parseRobots(text) {
-    const lines = text.split('\n');
+Function yang saya buat di [index.js](./index.js) ini bertujuan untuk membaca isi `robots.txt` per baris, lalu mengubahnya menjadi object yang lebih terstruktur dan mudah digunakan. Di awal, saya pecah teks menjadi array baris menggunakan `split('\n')`, lalu menyiapkan object hasil dengan properti `agents` dan `Sitemap`, serta membuat variabel `currentAgents` untuk menyimpan `user-agent` yang sedang aktif saat parsing berlangsung.
 
-    const result = {
-        agents: {},
-        Sitemap: []
-    };
+Setelah itu dilakukan perulangan untuk membaca setiap baris. Di sini saya gunakan trim() supaya spasi tidak mengganggu proses parsing. Jika baris kosong atau berupa komentar `(diawali #)`, maka saya anggap blok sebelumnya sudah selesai, sehingga currentAgents di-reset agar tidak terbawa ke aturan berikutnya.
 
-    let currentAgents = [];
-```
+Selanjutnya saya memisahkan bagian key dan value dengan `split(':')`, karena format `robots.txt` memang seperti `User-agent: *`. Key saya ubah ke lowercase supaya lebih konsisten dan tidak sensitif terhadap perbedaan huruf besar/kecil.
 
-Setelah itu dilakukan perulangan untuk membaca setiap baris. Di sini saya menggunakan `trim()` supaya spasi tidak mengganggu parsing. Jika baris kosong atau komentar `(diawali #)`, maka saya reset currentAgents karena artinya blok sebelumnya sudah selesai. codenya:
-```
-    for (let rawLine of lines) {
-        let line = rawLine.trim();
+Ketika menemukan `User-agent`, saya simpan nilainya ke dalam `currentAgents`. Jika agent tersebut belum ada di object hasil, maka saya inisialisasi dengan struktur `Allow` dan `Disallow` berupa array kosong. Jadi setiap agent punya tempat sendiri untuk menyimpan aturan.
 
-        if (line === '' || line.startsWith('#')) {
-            currentAgents = [];
-            continue;
-        }
-    }
-```
+Untuk bagian `Allow` dan `Disallow`, saya menambahkan path ke semua agent yang sedang aktif di `currentAgents`. Saya juga memastikan value tidak kosong supaya tidak ada data yang tidak valid masuk ke dalam array.
 
-Selanjutnya saya memisahkan key dan value dengan `split(':')`. Karena dalam robots.txt formatnya seperti `User-agent: *`, maka bagian sebelum `:` jadi key dan setelahnya jadi value. Key juga saya ubah ke lowercase supaya tidak sensitif terhadap huruf besar/kecil. codenya:
-```
-const [key, ...rest] = line.split(':');
-if (!key || rest.length === 0) continue;
-     
-const value = rest.join(':').trim();
-const lowerKey = key.toLowerCase();
-```
+Sedangkan untuk `Sitemap`, karena sifatnya global (tidak tergantung user-agent), saya langsung masukkan ke dalam array Sitemap di object hasil. Hal yang sama juga saya lakukan untuk Host, tapi disimpan sebagai properti tunggal karena biasanya hanya satu nilai.
 
-selanjutnya di bagian ini saya menangani `User-agent`. Saat menemukan `user-agent`, lalu saya simpan ke dalam `currentAgents`. Kalau agent tersebut belum ada di result, saya inisialisasi menjadi array kosong untuk Allow dan Disallow. codenya:
-```
-        if (lowerKey === 'user-agent') {
-            const agent = value.toLowerCase();
-
-            if (!result.agents[agent]) {
-                result.agents[agent] = {
-                    Allow: [],
-                    Disallow: []
-                };
-            }
-
-            currentAgents.push(agent);
-        }
-```
-
-selanjutnya untuk `Allow`, saya tambahkan path ke semua agent yang sedang aktif. Tapi saya cek dulu kalau valuenya kosong, maka tidak dimasukkan. Ini untuk menghindari array berisi string kosong. codenya:
-```
-        else if (lowerKey === 'allow') {
-            if (value === '') continue;
-
-            for (const agent of currentAgents) {
-                result.agents[agent].Allow.push(value);
-            }
-        }
-```
-
-kurang lebihnya sama seperti sebelumnya, saya implementasikan juga untuk Disallow, yaitu memasukkan path ke semua agent aktif. Lagi-lagi saya abaikan kalau kosong supaya hasilnya bersih. codenya :
-```
-        else if (lowerKey === 'disallow') {
-            if (value === '') continue;
-
-            for (const agent of currentAgents) {
-                result.agents[agent].Disallow.push(value);
-            }
-        }
-```
-
-Untuk `Sitemap`, karena sifatnya general jadi saya langsung masukkan ke array `Sitemap` di result. codenya:
-```
-        else if (lowerKey === 'sitemap') {
-            if (value !== '') {
-                result.Sitemap.push(value);
-            }
-        }
-```
-
-Selain itu, saya juga menangani `Host` sebagai properti tambahan jika ada di file robots.txt. codenya:
-```
-        else if (lowerKey === 'host') {
-            if (value !== '') {
-                result.Host = value;
-            }
-        }
-    }
-```
-
-jadi intinya function ini diibaratkan seperti konsep sederhana seperti state machine, di mana currentAgents berperan sebagai state aktif. Setiap kali ada User-agent, state berubah, dan setiap Allow atau Disallow akan mengikuti state tersebut sampai ada perubahan atau reset.
+Jadi secara keseluruhan, function ini bekerja mirip konsep sederhana state machine, di mana `currentAgents` menjadi state yang aktif. Setiap kali ada `User-agent`, state berubah, dan aturan seperti `Allow` atau `Disallow` akan mengikuti state tersebut sampai ada perubahan atau reset.
