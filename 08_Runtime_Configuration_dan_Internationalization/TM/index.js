@@ -36,7 +36,7 @@ async function run() {
         const kursData = await fetchKurs();
         const tanggal = formatTanggal(kursData.date);
 
-        const nilaiUji = [25000];
+        const nilaiUji = [25000, 50000, 100000];
 
         for (let i = 0; i < nilaiUji.length; i++) {
             const idr = nilaiUji[i];
