@@ -11,7 +11,7 @@
 `Asisten Praktikum: Adhiansyah Ancha & Hamid Khaeruman`
 
 ## Soal
-
+Buatlah satu endpoint lagi beserta dokumentasi OpenAPI-nya, yaitu GET /menu yang menampilkan daftar semua nama kategori menu yang ada.
 
 ## Kode Sumber
 
