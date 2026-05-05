@@ -5,17 +5,12 @@ const swaggerUi = require('swagger-ui-express');
 const app = express();
 app.use(express.json());
 
-// versi lain dari generator angka (pakai reduce, bukan for-loop)
 const generateNumberFromName = (name = "") =>
   (Array.from(name).reduce((acc, char, idx) =>
     acc + char.charCodeAt(0) * (idx + 1), 0) % 100) + 1;
 
-// routing dipisah pakai Router (beda struktur)
 const router = express.Router();
 
-/**
- * Swagger config
- */
 const swaggerSpec = swaggerJsdoc({
   definition: {
     openapi: '3.0.0',
