@@ -37,7 +37,7 @@ app.get('/film/:id', (req, res) => {
     }
 
     return res.status(200).json(film);
-});
+}); 
 
 // Tambahkan film baru
 app.post('/film', (req, res) => {

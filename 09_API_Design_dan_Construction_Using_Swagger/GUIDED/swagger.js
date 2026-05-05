@@ -10,7 +10,7 @@ const options = {
             version: '1.0.0',
             description: 'API sederhana dari Express untuk film-film yang pernah ditonton',
         },
-    },
+    }, 
     apis: ["./app.js"],
 };
 const specs = swaggerJSDoc(options);
