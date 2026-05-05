@@ -1,0 +1,9 @@
+{
+  "name": "text-utils-count",
+  "version": "1.0.0",
+  "description": "Utility hitung huruf dan kata",
+  "type": "module",
+  "main": "index.js",
+  "author": "Revalsa",
+  "license": "ISC"
+}

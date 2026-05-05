@@ -1,7 +1,11 @@
 {
   "devDependencies": {
+    "nodemon": "^3.1.14",
     "typescript": "^6.0.2"
   },
+  "scripts": {
+  "dev": "nodemon 09_API_Design_dan_Construction_Using_Swagger/GUIDED/app.js"
+},
   "dependencies": {
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
