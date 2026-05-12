@@ -64,9 +64,13 @@ Di file `pangkat.js`, saya membuat fungsi `pangkat(x, y)` yang dipakai untuk men
 
 Setelah itu, di sini saya tidak langsung memakai fungsi dari masing-masing file `lib`, tapi saya gabungkan semuanya lewat `index.js` sebagai pintu utama library. Jadi di `index.js` saya import semua fungsi tadi, lalu saya export lagi supaya bisa dipakai dari luar project. Ini juga supaya struktur library lebih rapi dan terpusat di satu file utama.
 
-Lalu saya juga set `package.json` dengan `"type": "module"` supaya bisa menggunakan `import` dan `export` tanpa error karena Node.js akan mengenali ini sebagai ES Module.
+Lalu saya juga set `package.json` dengan `"type": "module"` supaya bisa menggunakan `import` dan `export` tanpa error karena Node.
 
-Setelah library selesai, di sini saya membuat folder baru untuk test. Lalu saya install library ini secara lokal pakai `npm install ../mtk-gampang` di folder test tadi. Setelah itu di file `index.js` di [test](./test/), saya import fungsi dari library dengan:
+Setelah library selesai, di sini saya membuat folder baru untuk test. Lalu saya install library ini secara lokal pakai `npm install ../mtk-gampang` di folder test tadi. nah kan nanti akan muncul node_modules dengan mtk-gampang. :
+
+![2.](img2.png)
+
+Setelah itu di file `index.js` di [test](./test/), saya import fungsi dari library dengan:
 
 ```
 import { kuadrat, pangkat, bulat } from "libr";
