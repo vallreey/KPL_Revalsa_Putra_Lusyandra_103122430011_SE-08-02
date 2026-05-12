@@ -13,4 +13,4 @@
 ## Pranala
 https://github.com/vallreey/TUBES-Ram_May_Cry-BasDat_KPL-SE_08_02
 
-![1.](./img1.png)
+![1.](./img1.png) 
