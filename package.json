@@ -4,11 +4,12 @@
     "typescript": "^6.0.2"
   },
   "scripts": {
-  "dev": "nodemon 09_API_Design_dan_Construction_Using_Swagger/GUIDED/app.js"
-},
+    "dev": "nodemon 09_API_Design_dan_Construction_Using_Swagger/GUIDED/app.js"
+  },
   "dependencies": {
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
+    "mtk-gampang": "file:10_Library_Construction/TM/mtk-gampang",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1"
   }
