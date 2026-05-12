@@ -52,7 +52,7 @@ Untuk library Ada di :
 - [pangkat.js](./mtk-gampang/lib/pangkat.js) 
 
 untuk main/test ada di :
-- [main.js](./main/main.js)
+- [index.js](./test/index.js)
 
 ## Output
 ![1.](img1.png)
