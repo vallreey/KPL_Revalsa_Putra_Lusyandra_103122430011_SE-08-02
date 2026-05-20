@@ -59,5 +59,5 @@ Karena `toLowerCase()` hanya bisa dipakai pada string. Sementara isi array data 
 
 menjadi :
 ```
-const str = String(data).toLowerCase();
+const str = String(data).toLowerCase(); 
 ```
