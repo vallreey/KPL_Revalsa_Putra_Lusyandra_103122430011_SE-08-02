@@ -51,4 +51,4 @@ Bisakah kamu tunjukkan apakah kode sudah benar atau bagian mana yang perlu diper
 ![1.](img1.png)
 
 ## Deskripsi Program
-Rumus penjumlahannya sudah benar, tetapi fungsi harus diberi export agar bisa dipanggil di file test. Tanpa export, test akan error karena tambahPengitung tidak ditemukan sebagai module export. jadi di situ saya mengubah `hitung.js` menjadi export agar bisa dipanggil dan digunakan di `hitung.test.js`
+Rumus penjumlahannya sudah benar, tetapi fungsi harus diberi export agar bisa dipanggil di file test. Tanpa export, test akan error karena `tambahPengitung` tidak ditemukan sebagai module export. jadi di situ saya mengubah `hitung.js` menjadi export agar bisa dipanggil dan digunakan di `hitung.test.js`
